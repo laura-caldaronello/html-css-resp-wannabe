@@ -1,0 +1,208 @@
+.row {
+  width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+/* BLOCCO LEZIONI */
+#lezioni .row>.left,
+#lezioni .row>.right {
+  width: 50%;
+  float: left;
+}
+
+#lezioni .row img {
+  /* per centrare orizzontalmente */
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#lezioni {
+  text-align: center;
+}
+
+/* BLOCCO STEPS */
+#steps .row>.left,
+#steps .row>.central,
+#steps .row>.right {
+  float: left;
+  width: 33%;
+}
+
+#steps {
+  text-align: center;
+}
+
+/* BLOCCO PERCHE */
+#why {
+  text-align: center;
+}
+
+#why .row>.first,
+#why .row>.second,
+#why .row>.third {
+  width: 100%;
+  margin-top: 80px;
+}
+
+#why .row img {
+  background-color: #428bca;
+  border-radius: 50%;
+  padding: 30px
+}
+
+/* COMMON */
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container.grey {
+  background-color: #f9f9f9;
+}
+
+img {
+  height: 200px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* INIZIO ESERCIZIO */
+
+@media screen and (max-width: 419px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .row {
+    width: 100vw;
+    margin-top: 0;
+    padding: 1vw;
+  }
+
+  #lezioni .row>.left,
+  #lezioni .row>.right,
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    width: 100%;
+    margin: 1vw 0;
+    font-size: 3vw;
+  }
+
+  #steps {
+    background-color: transparent;
+  }
+  #lezioni > .row,
+  #why > .row {
+    background-color: rgb(242 242 205);
+  }
+
+  img {
+    width: 20%;
+    height: auto;
+    margin: 1vw auto;
+  }
+  #why .row img {
+    padding: 4%;
+  }
+
+  h1 {
+    font-size: 5vw;
+    margin: 2vw auto;
+  }
+  h3 {
+    font-size: 4vw;
+  }
+
+  hr {
+    border: 1% solid black;
+  }
+
+}
+
+/* BONUS: come riferimento per la max-width ho preso 1px in meno rispetto alla minima larghezza dei laptop su screensiz.es */
+
+@media screen and (min-width: 420px)
+              and (max-width: 767px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .row {
+    width: 100vw;
+    margin-top: 0;
+    padding: 1vw;
+  }
+
+  #lezioni .row>.left,
+  #lezioni .row>.right,
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    margin: 1vw 0;
+    padding: 1vw;
+    font-size: 3vw;
+  }
+
+  #steps {
+    background-color: transparent;
+  }
+  #lezioni > .row,
+  #why > .row {
+    background-color: rgb(242 242 205);
+  }
+
+  img {
+    width: 20vw;
+    height: 20vw;
+    object-fit: contain;
+    margin: 1vw auto;
+  }
+  #why .row img {
+    padding: 4%;
+  }
+
+  h1 {
+    font-size: 5vw;
+    margin: 2vw auto;
+  }
+  #lezioni h1 {
+    width: 50%;
+    animation: moving 2s infinite linear alternate,
+               highlight 0.3s infinite linear;
+  }
+  @keyframes moving {
+    from {margin-left: 0;}
+    to {margin-left: 50%;}
+  }
+  @keyframes highlight {
+    from {background-color: transparent;}
+    to {background-color: yellow;}
+  }
+  h3 {
+    font-size: 4vw;
+  }
+
+  hr {
+    border: 1% solid black;
+  }
+
+}
